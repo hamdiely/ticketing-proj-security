@@ -48,12 +48,12 @@ public class SecurityConfig {
                         "/fragments/**",
                         "/assets/**",
                         "/images/**"
-                ).permitAll()
-                .anyRequest().authenticated()
+                ).permitAll()// permitted all
+                .anyRequest().authenticated() // any other request should be authenticated
                 .and()
 //                .httpBasic()
                 .formLogin()
-                .loginPage("/login")
+                .loginPage("/login") // defining login page that we are using
                // .defaultSuccessUrl("/welcome")
                 .successHandler(authSuccessHandler)
                 .failureUrl("/login?error=true")

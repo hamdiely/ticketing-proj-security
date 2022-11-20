@@ -14,6 +14,7 @@ public class SecurityServiceImpl implements SecurityService {
     private final UserRepository userRepository;
 
     public SecurityServiceImpl(UserRepository userRepository) {
+
         this.userRepository = userRepository;
     }
 
